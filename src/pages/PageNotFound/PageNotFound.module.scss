@@ -1,0 +1,35 @@
+@import '../../sass/mixins';
+
+.wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+
+    text-align: center;
+
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 3rem;
+        
+        transform: translate(-50%, -70%);
+        
+        .title {
+            color: #4A4A4A;
+        }
+        
+        .text {
+            // font-size: 2rem;
+            color: #7D7D7D;
+            margin-top: 2rem;
+        }
+
+        @include mobile {
+            font-size: 1.6rem;
+        }
+
+    }
+
+}

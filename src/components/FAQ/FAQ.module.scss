@@ -1,0 +1,13 @@
+@import '../../sass/mixins';
+
+.faqs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem; 
+    margin: 4.4em 0;
+    align-items: flex-start;
+
+    @include mobile-tablet {
+        grid-template-columns: 1fr;
+    }
+}

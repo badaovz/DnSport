@@ -1,0 +1,41 @@
+@import '../../sass/mixins';
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 4rem;
+    align-items: center;
+
+    img {
+        width: 80%;
+        filter: saturate(.25);
+        transition: var(--transition-500);
+
+        &:hover {
+            filter: unset;
+        }
+    }
+
+    .values {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+        margin: 6rem 0;
+    
+        @include mobile {
+            grid-template-columns: 1fr;
+            gap: 4rem 0;
+        }
+    }
+
+    @include mobile-tablet {
+        grid-template-columns: 1fr;
+        gap: 0;
+
+        img {
+            display: none;
+
+        }
+    }
+    
+}

@@ -1,0 +1,24 @@
+@import '../../sass/mixins';
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 8rem;
+
+    .item {
+        display: block;
+        padding: 3rem;
+        border-radius: 2rem;
+        color: var(--white-color);
+        background-color: var(--blue-color);
+        line-height: 1;
+        font-size: 3rem;
+
+        @include mobile {
+            font-size: 2rem;
+            padding: 2rem;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+@import '../../sass/mixins';
+
+.container {
+    margin-top: 8rem;
+    
+    .item {
+        display: grid;
+        gap: 10%;
+        grid-template-columns: 40% 50%;    
+        margin-bottom: 2rem;
+
+
+        &:nth-child(even) {
+            direction: rtl;
+            .image {
+                transform: skew(-15deg)
+            }
+            text-align: left;
+        }
+       
+
+        .image {
+            height: 80%;
+            overflow: hidden;
+            transform: skew(15deg);
+            transition: var(--transition-500);
+            
+            img {
+                border-radius: 50%;
+                height: 120%;
+    
+            }
+
+            &:hover {
+                transform: skew(0);
+            }
+        }
+
+        .title {
+            color: var(--white-color);
+            margin-bottom: 2rem;
+            font-size: 4.8rem;
+        }
+
+        .info {
+            color: var(--text-color);
+        }
+
+        @include mobile-tablet {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+
+            &:nth-child(even) {
+                direction: unset;
+             
+            }
+
+            .image {
+                width: 60%;
+                height: 100%;
+                
+                img {
+                    height: 100%;
+        
+                }
+            }
+
+
+        }
+
+        @include mobile {
+            .image {
+                margin-inline: auto;
+            }
+        }
+    }
+}

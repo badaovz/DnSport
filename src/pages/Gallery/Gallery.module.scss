@@ -1,0 +1,29 @@
+@import '../../sass/mixins';
+
+.container {
+    margin-top: 8rem;
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+
+        img { 
+            outline: 1.5rem solid transparent;
+            transition: var(--transition-500);
+
+            &:hover {
+                outline-color: var(--main-color);
+            }
+        }
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    
+    }
+}

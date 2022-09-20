@@ -1,0 +1,68 @@
+@import '../../sass/mixins';
+
+.card {
+    // background-color: var(--main-color);
+    // padding: 4rem;
+    // text-align: center;
+    // border-top-right-radius: 5rem;
+    // border-bottom-left-radius: 5rem;
+    // border: 2px solid transparent;
+    // transition: var(--transition-500);
+    // position: relative;
+
+    // &:hover {
+    //     background-color: transparent;
+    //     border-color: var(--border-color);
+    // }
+
+    @include cardStyle(center);
+    padding: 4rem;
+
+    &:hover .btn, &:hover .btnName {
+        background-color: var(--orange-color);
+        color: var(--bg-color);
+    }
+
+    .title {
+        color: var(--white-color);
+        margin: 2.6rem 0;
+    }
+    
+    .info {
+        color: var(--text-color);
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        background-color: var(--blue-color);
+        transition: var(--transition-500);
+    }
+
+    .btn.topRight {
+        position: absolute;
+        top: 0;
+        left:20%;
+        transform: translateY(-50%);
+    }
+    .btn.topMid {
+        position: absolute;
+        top: 0;
+        left:50%;
+        transform: translateY(-50%);
+    }
+
+    
+    .btnName {
+        display: inline-flex;
+        margin-top: 4rem;
+        font-weight: 400;
+        transition: var(--transition-500);
+
+        &:hover {
+            background-color: var(--white-color);
+        }
+    
+    }
+}
+
+

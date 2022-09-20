@@ -1,0 +1,67 @@
+@import '../../sass/mixins';
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    margin-bottom: 4.8rem;
+    // padding: 2.6rem 0;
+    .content {
+        text-align: left;
+    }
+    .dayWorks {
+        color: var(--orange-color);
+        margin: 1.6rem 0;
+    }
+
+    .title {
+        font-size: 4.8rem;
+        color: var(--white-color);
+    }
+    
+    .desc {
+        color: var(--text-color);
+        margin: 1.6rem 0 5.6rem;
+    }
+
+    .imageHero {
+        display: grid;
+        place-items: center;
+        margin-top: -4rem;
+
+        position: relative;
+
+        .heroCircle {
+            position: absolute;
+            // right: 50%;
+            height: 25rem; 
+            width: 25rem;
+            border-radius: 50%;
+            background-image: linear-gradient(75deg, var(--orange-color), transparent);
+            transition: all 500ms ease;
+            filter: blur(15px);
+            z-index: -1;
+            
+        }
+
+    }
+    
+    
+}
+
+@include mobile {
+    .wrapper {
+        grid-template-columns: 1fr;
+        .title {
+            font-size: 3.2rem;
+        }
+
+        .imageHero {
+            display: none;
+    
+        }
+    }
+
+
+
+}

@@ -1,0 +1,15 @@
+
+.titleHead {
+    display: flex;
+    align-items: center;
+
+    .btn {
+        background-color: var(--main-color);
+        pointer-events: none;
+    }
+
+    .title {
+        margin-left: 1.6rem;
+        color: var(--white-color);
+    }
+}

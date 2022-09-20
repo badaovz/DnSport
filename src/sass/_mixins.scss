@@ -1,0 +1,38 @@
+@mixin cardStyle($text-align) {
+    position: relative;
+    text-align: $text-align;
+    border: 2px solid transparent;
+    border-top-right-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+    transition: var(--transition-500);
+    background-color: var(--main-color);
+
+    &:hover {
+        background-color: transparent;
+        border-color: var(--border-color);
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 739px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 740px) and (max-width: 1023px){
+        @content;
+    }
+}
+
+@mixin mobile-tablet {
+    @media (max-width: 1023px){
+        @content;
+    }
+}
+
+@mixin pc {
+    @media (min-width: 1024px){
+        @content;
+    }
+}

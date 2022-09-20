@@ -1,0 +1,102 @@
+@import '../../sass/mixins';
+
+.container {
+    background-color: var(--blue-color);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: var(--nav-height);
+}
+
+.wrapper, .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:  var(--white-color);
+    font-size: 16px;
+    position: relative;
+}
+
+.wrapper {
+    .logo {
+        color: var(--white-color);
+        font-size: 2rem;
+
+        span {
+            color: var(--orange-color);
+        }
+    }
+}
+
+.nav {
+
+   &_link {
+        line-height: var(--nav-height);
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        &:hover {
+            color: var(--orange-color);
+        }
+        a {
+            transition: var(--transition-500);
+
+        }
+   }
+
+   .active {
+        color: var(--orange-color);
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-top: 1rem solid var(--blue-color);
+            border-left: 1rem solid transparent;
+            border-right: 1rem solid transparent;
+            border-bottom: 1rem solid transparent;
+        }
+   }
+}
+
+.navBtn {
+    display: none;
+    color: var(--white-color);
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@include mobile-tablet {
+    .wrapper {
+        .nav {
+            display: none;
+        }
+        .navBtn{ 
+            display: block;
+        }
+
+        .nav.active {
+            display: block !important;
+            position: absolute;
+            top: 100%;
+            right: 0;
+
+            li {
+                background-color: var(--blue-color);
+                padding: 1.5rem 8rem 1.5rem 4rem;
+                box-shadow: 2rem 2rem 5rem rgba(0, 0, 0, .5);
+
+                &:hover {
+                    color: var(--orange-color)
+                }
+            }
+        }
+    
+    }
+}
+
